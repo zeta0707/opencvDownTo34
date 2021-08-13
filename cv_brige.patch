@@ -1,0 +1,11 @@
+--- cv_bridgeConfig.cmake.org	2021-08-13 14:44:58.127374183 +0900
++++ cv_bridgeConfig.cmake	2021-08-13 14:25:41.161848843 +0900
+@@ -93,7 +93,7 @@
+ 
+ if(NOT "include;/usr/include;/usr/include/opencv " STREQUAL " ")
+   set(cv_bridge_INCLUDE_DIRS "")
+-  set(_include_dirs "include;/usr/include;/usr/include/opencv")
++  set(_include_dirs "include;/usr/include;/usr/local/include/opencv")
+   if(NOT "https://github.com/ros-perception/vision_opencv/issues " STREQUAL " ")
+     set(_report "Check the issue tracker 'https://github.com/ros-perception/vision_opencv/issues' and consider creating a ticket if the problem has not been reported yet.")
+   elseif(NOT "http://www.ros.org/wiki/cv_bridge " STREQUAL " ")
