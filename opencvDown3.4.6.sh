@@ -5,7 +5,7 @@ sudo find /usr -name "*cv2*" | xargs sudo rm -rf
 sudo find / -name "*OpenCV*" | xargs sudo rm -rf
 
 sudo apt-get update
-sudo apt-get upgrade -y
+#sudo apt-get upgrade -y
 sudo apt-get install -y python2.7-dev python3-dev python-numpy python3-numpy
 
 sudo apt-get install -y libjpeg-dev libpng-dev libtiff-dev
@@ -58,7 +58,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D PYTHON3_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \
 ../
 
-make -j4
+#if you have colling fan, use "-j4"
+#make -j4
+make -j3
 sudo make install
 sudo sh -c 'echo '/usr/local/lib' > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
